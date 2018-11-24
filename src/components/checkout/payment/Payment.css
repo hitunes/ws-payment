@@ -1,0 +1,287 @@
+.payment-card__wrapper {
+  width: 482px;
+  background-color: #fff;
+  border-radius: 7.5px;
+  -webkit-box-shadow: 0px 15px 30px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 15px 30px 0 rgba(0, 0, 0, 0.3);
+  padding: 51px;
+  padding-top: 44px;
+  z-index: 11;
+}
+
+@media screen and (max-width: 454px) {
+  .payment-card__wrapper {
+    width: 320px;
+    padding: 20px;
+  }
+}
+
+.payment-card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.payment-card__header img {
+  margin-right: 27px;
+}
+
+.payment-card__header h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #3842B8;
+  letter-spacing: 0.56px;
+}
+
+.payment-card__header p {
+  font-size: 19.5px;
+  color: #43444C;
+  letter-spacing: 0.56px;
+}
+
+.payment-card__form {
+  margin-top: 41px;
+  margin-bottom: 51px;
+}
+
+@media screen and (max-width: 454px) {
+  .payment-card__form {
+    margin-bottom: 15px;
+  }
+}
+
+.payment-card__form label {
+  text-transform: uppercase;
+  font-size: 19.5px;
+  color: #000000;
+  letter-spacing: 0.45px;
+  margin-bottom: 27px;
+}
+
+@media screen and (max-width: 454px) {
+  .payment-card__form label {
+    margin-bottom: 10px;
+  }
+}
+
+.payment-card__form select,
+.payment-card__form input {
+  height: 59px;
+  font: 19.8px Helvetica;
+  color: #43444C;
+  background-color: #E6E7EE;
+  padding: 0;
+  border: 0;
+  padding-left: 20px;
+  border-radius: 7.5px;
+}
+
+.payment-card__form select:focus,
+.payment-card__form input:focus {
+  outline: 0;
+}
+
+.payment-card__form--date, .payment-card__form--number, .payment-card__form--name {
+  margin-bottom: 24px;
+}
+
+@media screen and (max-width: 454px) {
+  .payment-card__form--date, .payment-card__form--number, .payment-card__form--name {
+    margin-bottom: 10px;
+  }
+}
+
+.payment-card__form--date div, .payment-card__form--number div, .payment-card__form--name div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.payment-card__form--number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 454px) {
+  .payment-card__form--number {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.payment-card__form--number div:nth-child(1) {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+@media screen and (max-width: 454px) {
+  .payment-card__form--number div:nth-child(1) {
+    margin-bottom: 10px;
+  }
+}
+
+.payment-card__form--number div:nth-child(2) {
+  width: 100px;
+  margin-left: 43px;
+}
+
+@media screen and (max-width: 454px) {
+  .payment-card__form--number div:nth-child(2) {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.payment-card__form--date select {
+  padding-right: 8px;
+}
+
+.payment-card__form--date select:nth-child(1) {
+  width: 21%;
+}
+
+.payment-card__form--date select:nth-child(2) {
+  width: 38%;
+}
+
+.payment-card__form--date select:nth-child(3) {
+  width: 28%;
+}
+
+.payment-card__form--date .payment-card__form--date-select {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.payment-card__form--date label {
+  font-family: 'Lato';
+}
+
+.payment-card__button {
+  text-transform: uppercase;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(1%, #4A67E7), color-stop(99%, #3942B8));
+  background-image: linear-gradient(-90deg, #4A67E7 1%, #3942B8 99%);
+  border-radius: 7.5px;
+  height: 68px;
+  width: 100%;
+  color: #fff;
+  outline: 0;
+  padding: 0;
+  border: 0;
+  font-size: 19.8px;
+  letter-spacing: 0.45px;
+  cursor: pointer;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.payment-card__button:hover {
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(100%, #4A67E7), color-stop(50%, #3942B8));
+  background-image: linear-gradient(-90deg, #4A67E7 100%, #3942B8 50%);
+}
+
+.submitted {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s 2s, opacity .2s linear;
+  transition: visibility 0s 2s, opacity .2s linear;
+}
+
+.submitted__wrapper {
+  width: 482px;
+  height: 561px;
+  background-color: #E6E7EE;
+  border-radius: 7.5px;
+  -webkit-box-shadow: 0px 15px 29px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 15px 29px 0 rgba(0, 0, 0, 0.3);
+  padding: 51px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 9;
+  -webkit-transform: translate(-46%, -50%);
+          transform: translate(-46%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.submitted__wrapper div {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  color: #202020;
+}
+
+.submitted__wrapper h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 454px) {
+  .submitted__wrapper h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.submitted__wrapper i {
+  font-size: 9rem;
+  line-height: 1;
+  color: #24b663;
+}
+
+@media screen and (max-width: 454px) {
+  .submitted__wrapper i {
+    font-size: 4rem;
+  }
+}
+
+.submitted__wrapper p {
+  margin-top: 20px;
+  font-size: 1.25rem;
+  line-height: 35px;
+}
+
+@media screen and (max-width: 454px) {
+  .submitted__wrapper p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 454px) {
+  .submitted__wrapper {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 320px;
+    padding: 20px;
+  }
+}
+/*# sourceMappingURL=Payment.css.map */

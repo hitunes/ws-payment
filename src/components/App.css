@@ -1,0 +1,14 @@
+.App {
+    background-image: url("/images/Background.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+::placeholder {
+    text-transform: uppercase;
+}

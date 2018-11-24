@@ -1,0 +1,192 @@
+.payment-card__ {
+    &wrapper {
+        width: 482px;
+        background-color: #fff;
+        border-radius: 7.5px;
+        box-shadow: 0px 15px 30px 0 rgba(00, 00, 00, 0.3);
+        padding: 51px;
+        padding-top: 44px;
+        z-index: 11;
+        @media screen and (max-width: 454px) {
+            width: 320px;
+            padding: 20px;
+        }
+    }
+    &header {
+        display: flex;
+        align-items: center;
+        img {
+            margin-right: 27px;
+        }
+        h2 {
+            text-transform: uppercase;
+            font-size: 30px;
+            color: #3842B8;
+            letter-spacing: 0.56px;
+        }
+        p {
+            font-size: 19.5px;
+            color: #43444C;
+            letter-spacing: 0.56px;
+        }
+    }
+    &form {
+        margin-top: 41px;
+        margin-bottom: 51px;
+        @media screen and (max-width: 454px) {
+            margin-bottom: 15px;
+        }
+        label {
+            text-transform: uppercase;
+            font-size: 19.5px;
+            color: #000000;
+            letter-spacing: 0.45px;
+            margin-bottom: 27px;
+            @media screen and (max-width: 454px) {
+                margin-bottom: 10px;
+            }
+        }
+        select,
+        input {
+            height: 59px;
+            font: 19.8px Helvetica;
+            color: #43444C;
+            background-color: #E6E7EE;
+            padding: 0;
+            border: 0;
+            padding-left: 20px;
+            border-radius: 7.5px;
+            &:focus {
+                outline: 0;
+            }
+        }
+        &--date,
+        &--number,
+        &--name {
+            margin-bottom: 24px;
+            @media screen and (max-width: 454px) {
+                margin-bottom: 10px;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        &--number {
+            display: flex;
+            justify-content: space-between;
+            @media screen and (max-width: 454px) {
+                flex-direction: column;
+            }
+            div:nth-child(1) {
+                flex-grow: 1;
+                @media screen and (max-width: 454px) {
+                    margin-bottom: 10px;
+                }
+            }
+            div:nth-child(2) {
+                width: 100px;
+                margin-left: 43px;
+                @media screen and (max-width: 454px) {
+                    margin-left: 0;
+                    width: 100%;
+                }
+            }
+        }
+        &--date {
+            select {
+                padding-right: 8px;
+            }
+            select:nth-child(1) {
+                width: 21%;
+            }
+            select:nth-child(2) {
+                width: 38%;
+            }
+            select:nth-child(3) {
+                width: 28%;
+            }
+            .payment-card__form--date-select {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            label {
+                font-family: 'Lato'
+            }
+        }
+    }
+    &button {
+        text-transform: uppercase;
+        background-image: linear-gradient(-90deg, #4A67E7 1%, #3942B8 99%);
+        border-radius: 7.5px;
+        height: 68px;
+        width: 100%;
+        color: #fff;
+        outline: 0;
+        padding: 0;
+        border: 0;
+        font-size: 19.8px;
+        letter-spacing: 0.45px;
+        cursor: pointer;
+        transition: all 0.35s ease-in-out;
+        &:hover {
+            background-image: linear-gradient(-90deg, #4A67E7 100%, #3942B8 50%);
+        }
+    }
+}
+
+.submitted {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity .2s linear;
+    &__wrapper {
+        width: 482px;
+        height: 561px;
+        background-color: #E6E7EE;
+        border-radius: 7.5px;
+        box-shadow: 0px 15px 29px 0 rgba(00, 00, 00, 0.3);
+        padding: 51px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 9;
+        transform: translate(-46%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div {
+            flex-direction: column;
+            text-align: center;
+            color: #202020;
+        }
+        h1 {
+            font-size: 5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            @media screen and (max-width: 454px) {
+                font-size: 2.5rem;
+            }
+        }
+        i {
+            font-size: 9rem;
+            line-height: 1;
+            color: #24b663;
+            @media screen and (max-width: 454px) {
+                font-size: 4rem;
+            }
+        }
+        p {
+            margin-top: 20px;
+            font-size: 1.25rem;
+            line-height: 35px;
+            @media screen and (max-width: 454px) {
+                font-size: 1rem;
+            }
+        }
+        @media screen and (max-width: 454px) {
+            transform: translate(-50%, -50%);
+            width: 320px;
+            padding: 20px;
+        }
+    }
+}
